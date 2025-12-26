@@ -4,23 +4,22 @@ on:
     push:
         branches: ["main"]
 
-
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
 
         steps:
             - name: Checkout Repository
-            uses: actions/checkout@v3
+              uses: actions/checkout@v3
 
             - name: Check index.html exists
-            run : |
-            if [ -f index.html ]; then
-                echo "index.html found!"
-            else
-                echo "index.html missing!"
-                exit 1
-            fi
+              run : |
+                if [ -f index.html ]; then
+                    echo "index.html found!"
+                else
+                    echo "index.html missing!"
+                    exit 1
+                fi
 
             - name: Deploy to Github Pages
             run: echo "Deploying to GitHub Pages.."
