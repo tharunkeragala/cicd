@@ -22,4 +22,4 @@ jobs:
                 fi
 
             - name: Deploy to Github Pages
-            run: echo "Deploying to GitHub Pages.."
+              run: echo "Deploying to GitHub Pages.."
